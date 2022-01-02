@@ -1,0 +1,56 @@
+body{
+    background-image: url("world.png");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    font-family: Chandas;
+}
+
+.flashcard{
+    height: 150px;
+    width: 150px;
+    margin: 5px;
+    position: relative;
+    transition: all 1s linear;
+    transform-style: preserve-3d;
+
+}
+.greed{
+    display: flex;
+    overflow: auto;
+    flex-wrap: wrap;
+    width: 480px;
+    height: 480px;
+}
+h1{
+    text-align: center;
+}
+
+.front,
+.back{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    border-radius: 5px;
+
+}
+
+.front{
+    z-index: 2;
+    color: darkorange;
+    background-color: #f8b8a5;
+    backface-visibility: hidden;
+}
+.back{
+    z-index: 1;
+    background-color: darkorange;
+    color: #f8b8a5;
+    transform: rotateY(180deg);
+}
+
+.flashcard:hover {
+    transform: rotateY(180deg);
+}
